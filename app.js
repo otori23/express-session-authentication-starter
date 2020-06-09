@@ -23,8 +23,7 @@ require('dotenv').config();
 var app = express();
 
 app.use(express.json());
-app.use(express.urlencoded({extended: true}));
-
+app.use(express.urlencoded({ extended: true }));
 
 /**
  * -------------- SESSION SETUP ----------------
@@ -39,7 +38,6 @@ app.use(express.urlencoded({extended: true}));
 app.use(passport.initialize());
 app.use(passport.session());
 
-
 /**
  * -------------- ROUTES ----------------
  */
@@ -47,6 +45,9 @@ app.use(passport.session());
 // Imports all of the routes from ./routes/index.js
 app.use(routes);
 
+/**
+ * -------------- TODO: ERROR HANDLING ----------------
+ */
 
 /**
  * -------------- SERVER ----------------
